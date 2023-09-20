@@ -1,11 +1,11 @@
 const hre = require("hardhat");
 async function main() {
-  const Transactions = await hre.ethers.getContractFactory("Transactions");
-  const transactions = await Transactions.deploy();
+  const RoboPunksNFT = await hre.ethers.getContractFactory("RoboPunksNFT");
+  const roboPunksNFT = await RoboPunksNFT.deploy();
 
-  await transactions.deployed();
+  await roboPunksNFT.deployed();
 
-  console.log("transaction:", transactions.address);
+  console.log("RoboPunksNFT deployed to:", roboPunksNFT.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
