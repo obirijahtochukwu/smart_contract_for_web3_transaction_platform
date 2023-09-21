@@ -1,11 +1,11 @@
 const hre = require("hardhat");
 async function main() {
-  const Transactions = await hre.ethers.getContractFactory("Transactions");
-  const transactions = await Transactions.deploy();
+  const CrowdFounding = await hre.ethers.getContractFactory("CrowdFounding");
+  const crowdFounding = await CrowdFounding.deploy();
 
-  await transactions.deployed();
+  await crowdFounding.deployed();
 
-  console.log("transaction:", transactions.address);
+  console.log("transaction:", crowdFounding.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
